@@ -383,61 +383,78 @@
 
             </div>
 
-            <!-- Dernières Opérations -->
-            <div class="bg-white rounded-3xl shadow-sm border border-gray-100 p-5 mb-6 mt-2">
+            <!-- Dernières Opérations CORRIGÉES ET ADAPTÉES MOBILE -->
+            <div class="bg-white rounded-3xl shadow-sm border border-gray-100 p-4 sm:p-5 mb-6 mt-2">
                 <div class="flex justify-between items-center mb-4">
-                    <h3 class="text-lg font-extrabold text-gray-900">Dernières Opérations</h3>
-                    <button onclick="ouvrirCompteProfessionnel()" class="text-[#eb5545] font-bold text-sm hover:underline">Voir plus</button>
+                    <h3 class="text-base sm:text-lg font-extrabold text-gray-900">Dernières Opérations</h3>
+                    <button onclick="ouvrirCompteProfessionnel()" class="text-[#eb5545] font-bold text-xs sm:text-sm hover:underline">Voir plus</button>
                 </div>
                 <div class="space-y-4">
-                    <div class="flex items-center justify-between pb-3 border-b border-gray-50">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-green-500">
-                                <svg class="w-5 h-5 transform rotate-[135deg]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    
+                    <!-- Opération 1 -->
+                    <div class="flex items-center justify-between pb-3 border-b border-gray-50 gap-2">
+                        <div class="flex items-center space-x-3 min-w-0 flex-1">
+                            <div class="w-10 h-10 rounded-full bg-green-100/70 flex items-center justify-center text-green-600 shrink-0">
+                                <svg class="w-5 h-5 transform rotate-[135deg]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                </svg>
                             </div>
-                            <div>
-                                <p class="font-bold text-gray-800 text-sm truncate max-w-[200px]">Virement mensuel #3 reçu de la part de DEVMEM S.A</p>
-                                <p class="text-xs text-gray-400 mt-0.5">13 oct. 2026</p>
-                            </div>
-                        </div>
-                        <span class="font-black text-green-600 text-sm whitespace-nowrap">+ 16 484,10 MAD</span>
-                    </div>
-                    <div class="flex items-center justify-between pb-3 border-b border-gray-50">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-green-500">
-                                <svg class="w-5 h-5 transform rotate-[135deg]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                            </div>
-                            <div>
-                                <p class="font-bold text-gray-800 text-sm truncate max-w-[200px]">Fiverr commission</p>
-                                <p class="text-xs text-gray-400 mt-0.5">01 oct. 2026</p>
+                            <div class="min-w-0 flex-1">
+                                <p class="font-bold text-gray-800 text-xs sm:text-sm truncate">Virement mensuel #3 reçu de DEVMEM S.A</p>
+                                <p class="text-[11px] sm:text-xs text-gray-400 mt-0.5">13 oct. 2026</p>
                             </div>
                         </div>
-                        <span class="font-black text-green-600 text-sm whitespace-nowrap">+ 13 206,80 MAD</span>
+                        <span class="font-black text-[#2e7d32] text-xs sm:text-sm whitespace-nowrap shrink-0 pl-1">+ 16 484,10 MAD</span>
                     </div>
-                    <div class="flex items-center justify-between pb-3 border-b border-gray-50">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-green-500">
-                                <svg class="w-5 h-5 transform rotate-[135deg]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+
+                    <!-- Opération 2 -->
+                    <div class="flex items-center justify-between pb-3 border-b border-gray-50 gap-2">
+                        <div class="flex items-center space-x-3 min-w-0 flex-1">
+                            <div class="w-10 h-10 rounded-full bg-green-100/70 flex items-center justify-center text-green-600 shrink-0">
+                                <svg class="w-5 h-5 transform rotate-[135deg]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                </svg>
                             </div>
-                            <div>
-                                <p class="font-bold text-gray-800 text-sm truncate max-w-[200px]">Virement mensuel #3 reçu de la part de DEVMEM S.A</p>
-                                <p class="text-xs text-gray-400 mt-0.5">13 sep. 2026</p>
+                            <div class="min-w-0 flex-1">
+                                <p class="font-bold text-gray-800 text-xs sm:text-sm truncate">Fiverr commission</p>
+                                <p class="text-[11px] sm:text-xs text-gray-400 mt-0.5">01 oct. 2026</p>
                             </div>
                         </div>
-                        <span class="font-black text-green-600 text-sm whitespace-nowrap">+ 16 071,45 MAD</span>
+                        <span class="font-black text-[#2e7d32] text-xs sm:text-sm whitespace-nowrap shrink-0 pl-1">+ 13 206,80 MAD</span>
                     </div>
-                    <div class="flex items-center justify-between">
-                        <div class="flex items-center space-x-3">
-                            <div class="w-10 h-10 rounded-full bg-green-50 flex items-center justify-center text-green-500">
-                                <svg class="w-5 h-5 transform rotate-[135deg]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+
+                    <!-- Opération 3 -->
+                    <div class="flex items-center justify-between pb-3 border-b border-gray-50 gap-2">
+                        <div class="flex items-center space-x-3 min-w-0 flex-1">
+                            <div class="w-10 h-10 rounded-full bg-green-100/70 flex items-center justify-center text-green-600 shrink-0">
+                                <svg class="w-5 h-5 transform rotate-[135deg]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                </svg>
                             </div>
-                            <div>
-                                <p class="font-bold text-gray-800 text-sm truncate max-w-[200px]">Fiverr commission</p>
-                                <p class="text-xs text-gray-400 mt-0.5">01 sep. 2026</p>
+                            <div class="min-w-0 flex-1">
+                                <p class="font-bold text-gray-800 text-xs sm:text-sm truncate">Virement mensuel #3 reçu de DEVMEM S.A</p>
+                                <p class="text-[11px] sm:text-xs text-gray-400 mt-0.5">13 sep. 2026</p>
                             </div>
                         </div>
-                        <span class="font-black text-green-600 text-sm whitespace-nowrap">+ 26 961,70 MAD</span>
+                        <span class="font-black text-[#2e7d32] text-xs sm:text-sm whitespace-nowrap shrink-0 pl-1">+ 16 071,45 MAD</span>
                     </div>
+
+                    <!-- Opération 4 -->
+                    <div class="flex items-center justify-between gap-2">
+                        <div class="flex items-center space-x-3 min-w-0 flex-1">
+                            <div class="w-10 h-10 rounded-full bg-green-100/70 flex items-center justify-center text-green-600 shrink-0">
+                                <svg class="w-5 h-5 transform rotate-[135deg]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                                </svg>
+                            </div>
+                            <div class="min-w-0 flex-1">
+                                <p class="font-bold text-gray-800 text-xs sm:text-sm truncate">Fiverr commission</p>
+                                <p class="text-[11px] sm:text-xs text-gray-400 mt-0.5">01 sep. 2026</p>
+                            </div>
+                        </div>
+                        <span class="font-black text-[#2e7d32] text-xs sm:text-sm whitespace-nowrap shrink-0 pl-1">+ 26 961,70 MAD</span>
+                    </div>
+
                 </div>
             </div>
 
@@ -717,7 +734,7 @@
                             <div class="relative w-16 h-16 flex items-center justify-center shrink-0">
                                 <svg class="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
                                     <path class="text-gray-200" stroke-width="3.5" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                                    <path class="text-appRed" stroke-dasharray="25, 100" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5" stroke-linecap="round" stroke-width="3.5" stroke-currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    <path class="text-appRed" stroke-dasharray="25, 100" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke-currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                                 </svg>
                                 <div class="absolute inset-0 flex items-center justify-center font-black text-gray-900 text-sm">1/4</div>
                             </div>
@@ -761,7 +778,7 @@
                                 <div onclick="switchAppViewWithLoading('beneficiaires')" class="bg-white border border-gray-100 shadow-[0_2px_12px_rgba(0,0,0,0.06)] rounded-2xl p-5 flex items-center justify-between cursor-pointer hover:border-attijariOrange transition">
                                     <span class="font-bold text-gray-800 text-[15px]">Choisissez ou ajoutez un bénéficiaire</span>
                                     <div class="text-appRed">
-                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
                                     </div>
                                 </div>
                             </div>
@@ -792,7 +809,7 @@
                             <div class="relative w-16 h-16 flex items-center justify-center shrink-0">
                                 <svg class="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
                                     <path class="text-gray-200" stroke-width="3.5" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                                    <path class="text-appRed" stroke-dasharray="50, 100" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5" stroke-linecap="round" stroke-width="3.5" stroke-currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    <path class="text-appRed" stroke-dasharray="50, 100" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke-currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                                 </svg>
                                 <div class="absolute inset-0 flex items-center justify-center font-black text-gray-900 text-sm">2/4</div>
                             </div>
@@ -840,7 +857,7 @@
                             <div class="relative w-16 h-16 flex items-center justify-center shrink-0">
                                 <svg class="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
                                     <path class="text-gray-200" stroke-width="3.5" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                                    <path class="text-appRed" stroke-dasharray="75, 100" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5" stroke-linecap="round" stroke-width="3.5" stroke-currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    <path class="text-appRed" stroke-dasharray="75, 100" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke-currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                                 </svg>
                                 <div class="absolute inset-0 flex items-center justify-center font-black text-gray-900 text-sm">3/4</div>
                             </div>
@@ -898,7 +915,7 @@
                             <div class="relative w-12 h-12 flex items-center justify-center shrink-0">
                                 <svg class="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
                                     <path class="text-gray-200" stroke-width="3.5" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                                    <path class="text-appRed" stroke-dasharray="100, 100" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5" stroke-linecap="round" stroke-width="3.5" stroke-currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    <path class="text-appRed" stroke-dasharray="100, 100" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke-currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                                 </svg>
                                 <div class="absolute inset-0 flex items-center justify-center font-black text-gray-900 text-xs">4/4</div>
                             </div>
@@ -1373,7 +1390,6 @@
             closeMobileMenuIfNeeded();
         }
 
-        // Fonction pour basculer vers la page des transactions du compte professionnel avec effet de chargement
         function ouvrirCompteProfessionnel() {
             showLoading(() => {
                 switchTab('transactions-pro');
