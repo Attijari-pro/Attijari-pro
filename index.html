@@ -336,7 +336,7 @@
             <!-- CONTENEUR SCROLLABLE HORIZONTAL -->
             <div class="flex overflow-x-auto space-x-4 pb-4 no-scrollbar snap-x snap-mandatory">
                 
-                <!-- Carte 1 : Compte Chèque Pro -->
+                <!-- Carte 1 : Compte Chèque Pro (Solde mis à -233,59 MAD) -->
                 <div onclick="switchTab('comptes')" class="min-w-[320px] sm:min-w-[350px] flex-1 bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden cursor-pointer hover:shadow-md transition snap-start">
                     <div class="bg-gradient-to-r from-[#eb5545] to-[#d63333] p-5 text-white relative">
                         <div class="flex justify-between items-start">
@@ -347,8 +347,8 @@
                         <p class="text-sm font-mono font-medium tracking-wider mt-0.5">00713N300400592</p>
                     </div>
                     <div class="p-5 bg-white flex justify-end items-center">
-                        <span class="solde-val text-2xl font-black text-gray-900 tracking-tight flex items-baseline">
-                            8,<span class="text-xs text-gray-600 font-bold ml-0.5 -translate-y-2 inline-block">65 DH</span>
+                        <span class="solde-val text-2xl font-black text-red-600 tracking-tight flex items-baseline">
+                            - 233,<span class="text-xs text-red-600 font-bold ml-0.5 -translate-y-2 inline-block">59 MAD</span>
                         </span>
                     </div>
                 </div>
@@ -400,8 +400,8 @@
                 </div>
                 <div class="space-y-4">
                     
-                    <!-- Opération 1 -->
-                    <div class="flex items-center justify-between pb-3 border-b border-gray-50 gap-2">
+                    <!-- Opération 1 (Cliquable) -->
+                    <div onclick="ouvrirDetailOperation('Virement mensuel #3 reçu de DEVMEM S.A', '+ 16 484,10 MAD', '13 oct. 2026', 'positive')" class="flex items-center justify-between pb-3 border-b border-gray-50 gap-2 cursor-pointer hover:bg-gray-50 p-2 rounded-xl transition">
                         <div class="flex items-center space-x-3 min-w-0 flex-1">
                             <div class="w-10 h-10 rounded-full bg-green-100/70 flex items-center justify-center text-green-600 shrink-0">
                                 <svg class="w-5 h-5 transform rotate-[135deg]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -416,8 +416,8 @@
                         <span class="font-black text-[#2e7d32] text-xs sm:text-sm whitespace-nowrap shrink-0 pl-1">+ 16 484,10 MAD</span>
                     </div>
 
-                    <!-- Opération 2 -->
-                    <div class="flex items-center justify-between pb-3 border-b border-gray-50 gap-2">
+                    <!-- Opération 2 (Cliquable) -->
+                    <div onclick="ouvrirDetailOperation('Fiverr commission', '+ 13 206,80 MAD', '01 oct. 2026', 'positive')" class="flex items-center justify-between pb-3 border-b border-gray-50 gap-2 cursor-pointer hover:bg-gray-50 p-2 rounded-xl transition">
                         <div class="flex items-center space-x-3 min-w-0 flex-1">
                             <div class="w-10 h-10 rounded-full bg-green-100/70 flex items-center justify-center text-green-600 shrink-0">
                                 <svg class="w-5 h-5 transform rotate-[135deg]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -432,8 +432,8 @@
                         <span class="font-black text-[#2e7d32] text-xs sm:text-sm whitespace-nowrap shrink-0 pl-1">+ 13 206,80 MAD</span>
                     </div>
 
-                    <!-- Opération 3 -->
-                    <div class="flex items-center justify-between pb-3 border-b border-gray-50 gap-2">
+                    <!-- Opération 3 (Cliquable) -->
+                    <div onclick="ouvrirDetailOperation('Virement mensuel #3 reçu de DEVMEM S.A', '+ 16 071,45 MAD', '13 sep. 2026', 'positive')" class="flex items-center justify-between pb-3 border-b border-gray-50 gap-2 cursor-pointer hover:bg-gray-50 p-2 rounded-xl transition">
                         <div class="flex items-center space-x-3 min-w-0 flex-1">
                             <div class="w-10 h-10 rounded-full bg-green-100/70 flex items-center justify-center text-green-600 shrink-0">
                                 <svg class="w-5 h-5 transform rotate-[135deg]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -448,8 +448,8 @@
                         <span class="font-black text-[#2e7d32] text-xs sm:text-sm whitespace-nowrap shrink-0 pl-1">+ 16 071,45 MAD</span>
                     </div>
 
-                    <!-- Opération 4 -->
-                    <div class="flex items-center justify-between gap-2">
+                    <!-- Opération 4 (Cliquable) -->
+                    <div onclick="ouvrirDetailOperation('Fiverr commission', '+ 26 961,70 MAD', '01 sep. 2026', 'positive')" class="flex items-center justify-between gap-2 cursor-pointer hover:bg-gray-50 p-2 rounded-xl transition">
                         <div class="flex items-center space-x-3 min-w-0 flex-1">
                             <div class="w-10 h-10 rounded-full bg-green-100/70 flex items-center justify-center text-green-600 shrink-0">
                                 <svg class="w-5 h-5 transform rotate-[135deg]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -651,22 +651,36 @@
             <div class="space-y-4">
                 <h3 class="text-base font-extrabold text-gray-800 px-1">Octobre 2026</h3>
 
-                <!-- Opération 1 : Virement mensuel #3 -->
-                <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex items-center justify-between">
+                <!-- Nouvelle opération ajoutée : ASSURANCE ATTIJARIWAFA BANK -->
+                <div onclick="ouvrirDetailOperation('ASSURANCE ATTIJARIWAFA BANK', '- 233,50 MAD', '16 oct. 2026', 'negative')" class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex items-center justify-between cursor-pointer hover:border-attijariOrange transition">
                     <div class="flex items-center space-x-3.5 min-w-0 flex-1">
                         <div class="w-10 h-10 rounded-full bg-red-50 text-appRed flex items-center justify-center shrink-0">
                             <svg class="w-5 h-5 transform rotate-[135deg]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
                         </div>
                         <div class="min-w-0 flex-1">
-                            <h4 class="font-bold text-gray-900 text-sm truncate">Virement mensuel #3 reçu de la part de DEVMEM S.A</h4>
+                            <h4 class="font-bold text-gray-900 text-sm truncate">ASSURANCE ATTIJARIWAFA BANK</h4>
+                            <p class="text-xs text-gray-400 mt-0.5">16 oct. 2026</p>
+                        </div>
+                    </div>
+                    <span class="font-black text-red-600 text-sm whitespace-nowrap shrink-0 pl-2">- 233,50 MAD</span>
+                </div>
+
+                <!-- Opération 1 : Virement mensuel #3 (Cliquable) -->
+                <div onclick="ouvrirDetailOperation('Virement mensuel #4 reçu de la part de DEVMEM S.A', '+ 16 484,10 MAD', '13 oct. 2026', 'positive')" class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex items-center justify-between cursor-pointer hover:border-attijariOrange transition">
+                    <div class="flex items-center space-x-3.5 min-w-0 flex-1">
+                        <div class="w-10 h-10 rounded-full bg-red-50 text-appRed flex items-center justify-center shrink-0">
+                            <svg class="w-5 h-5 transform rotate-[135deg]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                        </div>
+                        <div class="min-w-0 flex-1">
+                            <h4 class="font-bold text-gray-900 text-sm truncate">Virement mensuel #4 reçu de la part de DEVMEM S.A</h4>
                             <p class="text-xs text-gray-400 mt-0.5">13 oct. 2026</p>
                         </div>
                     </div>
                     <span class="font-black text-green-600 text-sm whitespace-nowrap shrink-0 pl-2">+ 16 484,10 MAD</span>
                 </div>
 
-                <!-- Opération 2 : VIR. WEB RECU DE ABALLAGH (10/10/2026) -->
-                <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex items-center justify-between">
+                <!-- Opération 2 : VIR. WEB RECU DE ABALLAGH (Cliquable) -->
+                <div onclick="ouvrirDetailOperation('VIR. WEB RECU DE ABALLAGH', '+ 3 850,00 MAD', '10 oct. 2026', 'positive')" class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex items-center justify-between cursor-pointer hover:border-attijariOrange transition">
                     <div class="flex items-center space-x-3.5 min-w-0 flex-1">
                         <div class="w-10 h-10 rounded-full bg-red-50 text-appRed flex items-center justify-center shrink-0">
                             <svg class="w-5 h-5 transform rotate-[135deg]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
@@ -679,8 +693,8 @@
                     <span class="font-black text-green-600 text-sm whitespace-nowrap shrink-0 pl-2">+ 3 850,00 MAD</span>
                 </div>
 
-                <!-- Opération 3 : HOSTINGER HEBERGEMENT (10/10/2026) -->
-                <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex items-center justify-between">
+                <!-- Opération 3 : HOSTINGER HEBERGEMENT (Cliquable) -->
+                <div onclick="ouvrirDetailOperation('HOSTINGER HEBERGEMENT', '- 3 843,39 MAD', '10 oct. 2026', 'negative')" class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex items-center justify-between cursor-pointer hover:border-attijariOrange transition">
                     <div class="flex items-center space-x-3.5 min-w-0 flex-1">
                         <div class="w-10 h-10 rounded-full bg-red-50 text-appRed flex items-center justify-center shrink-0">
                             <svg class="w-5 h-5 transform rotate-[135deg]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
@@ -693,8 +707,8 @@
                     <span class="font-black text-red-600 text-sm whitespace-nowrap shrink-0 pl-2">- 3 843,39 MAD</span>
                 </div>
 
-                <!-- Opération 4 : Virement effectué par M. Memphis Doku (09/10/2026) -->
-                <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex items-center justify-between">
+                <!-- Opération 4 : Virement effectué par M. Memphis Doku (Cliquable) -->
+                <div onclick="ouvrirDetailOperation('Virement effectué par M. Memphis Doku', '+ 3 852,10 MAD', '09 oct. 2026', 'positive')" class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex items-center justify-between cursor-pointer hover:border-attijariOrange transition">
                     <div class="flex items-center space-x-3.5 min-w-0 flex-1">
                         <div class="w-10 h-10 rounded-full bg-red-50 text-appRed flex items-center justify-center shrink-0">
                             <svg class="w-5 h-5 transform rotate-[135deg]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
@@ -707,8 +721,8 @@
                     <span class="font-black text-green-600 text-sm whitespace-nowrap shrink-0 pl-2">+ 3 852,10 MAD</span>
                 </div>
 
-                <!-- Opération 5 : Fiverr commission -->
-                <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex items-center justify-between">
+                <!-- Opération 5 : Fiverr commission (Cliquable) -->
+                <div onclick="ouvrirDetailOperation('Fiverr commission', '+ 13 206,80 MAD', '01 oct. 2026', 'positive')" class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex items-center justify-between cursor-pointer hover:border-attijariOrange transition">
                     <div class="flex items-center space-x-3.5 min-w-0 flex-1">
                         <div class="w-10 h-10 rounded-full bg-red-50 text-appRed flex items-center justify-center shrink-0">
                             <svg class="w-5 h-5 transform rotate-[135deg]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
@@ -724,8 +738,8 @@
                 <!-- Section Septembre 2026 -->
                 <h3 class="text-base font-extrabold text-gray-800 px-1 pt-2">Septembre 2026</h3>
 
-                <!-- Opération 6 -->
-                <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex items-center justify-between">
+                <!-- Opération 6 (Cliquable) -->
+                <div onclick="ouvrirDetailOperation('Virement mensuel #3 reçu de la part de DEVMEM S.A', '+ 16 071,45 MAD', '13 sep. 2026', 'positive')" class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex items-center justify-between cursor-pointer hover:border-attijariOrange transition">
                     <div class="flex items-center space-x-3.5 min-w-0 flex-1">
                         <div class="w-10 h-10 rounded-full bg-red-50 text-appRed flex items-center justify-center shrink-0">
                             <svg class="w-5 h-5 transform rotate-[135deg]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
@@ -738,8 +752,8 @@
                     <span class="font-black text-green-600 text-sm whitespace-nowrap shrink-0 pl-2">+ 16 071,45 MAD</span>
                 </div>
 
-                <!-- Opération 7 -->
-                <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex items-center justify-between">
+                <!-- Opération 7 (Cliquable) -->
+                <div onclick="ouvrirDetailOperation('Fiverr commission', '+ 26 961,70 MAD', '01 sep. 2026', 'positive')" class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex items-center justify-between cursor-pointer hover:border-attijariOrange transition">
                     <div class="flex items-center space-x-3.5 min-w-0 flex-1">
                         <div class="w-10 h-10 rounded-full bg-red-50 text-appRed flex items-center justify-center shrink-0">
                             <svg class="w-5 h-5 transform rotate-[135deg]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
@@ -755,8 +769,8 @@
                 <!-- Section Août 2026 -->
                 <h3 class="text-base font-extrabold text-gray-800 px-1 pt-2">Août 2026</h3>
 
-                <!-- Opération 8 -->
-                <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex items-center justify-between">
+                <!-- Opération 8 (Cliquable) -->
+                <div onclick="ouvrirDetailOperation('Virement mensuel #2 reçu de la part de DEVMEM S.A', '+ 16 071,45 MAD', '13 août 2026', 'positive')" class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex items-center justify-between cursor-pointer hover:border-attijariOrange transition">
                     <div class="flex items-center space-x-3.5 min-w-0 flex-1">
                         <div class="w-10 h-10 rounded-full bg-red-50 text-appRed flex items-center justify-center shrink-0">
                             <svg class="w-5 h-5 transform rotate-[135deg]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
@@ -769,8 +783,8 @@
                     <span class="font-black text-green-600 text-sm whitespace-nowrap shrink-0 pl-2">+ 16 071,45 MAD</span>
                 </div>
 
-                <!-- Opération 9 -->
-                <div class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex items-center justify-between">
+                <!-- Opération 9 (Cliquable) -->
+                <div onclick="ouvrirDetailOperation('Recharge effectuée par Memphis Doku', '+ 3 602,77 MAD', '13 août 2026', 'positive')" class="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex items-center justify-between cursor-pointer hover:border-attijariOrange transition">
                     <div class="flex items-center space-x-3.5 min-w-0 flex-1">
                         <div class="w-10 h-10 rounded-full bg-red-50 text-appRed flex items-center justify-center shrink-0">
                             <svg class="w-5 h-5 transform rotate-[135deg]" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
@@ -1363,6 +1377,51 @@
             </div>
         </div>
 
+        <!-- VUE DÉDIÉE : DÉTAIL OPÉRATION (Inspirée exactement de votre image) -->
+        <div id="view-detail-operation" class="app-view h-full flex-col bg-white relative">
+            <div class="px-5 py-4 flex items-center justify-between border-b border-gray-100 bg-white">
+                <button onclick="switchTab('transactions-pro')" class="text-appRed">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+                </button>
+                <h2 class="text-xl font-bold text-gray-900 tracking-tight">Détail opération</h2>
+                <div class="w-6"></div>
+            </div>
+
+            <div class="flex-1 overflow-y-auto px-6 py-6 space-y-6">
+                <div class="flex justify-between items-start border-b border-gray-100 pb-5">
+                    <div>
+                        <p id="detail-montant" class="text-3xl font-black text-gray-900 tracking-tight">-203,05 DH</p>
+                        <p id="detail-titre" class="text-sm font-bold text-gray-600 mt-1">SMMCPAN</p>
+                    </div>
+                    <div class="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 shadow-sm">
+                        <svg class="w-5 h-5 transform rotate-45" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <div>
+                        <span class="block text-xs font-bold text-gray-400">Date de valeur</span>
+                        <span id="detail-date-valeur" class="block text-sm font-extrabold text-gray-900 mt-0.5">15/10/2026</span>
+                    </div>
+
+                    <div>
+                        <span class="block text-xs font-bold text-gray-400">Date d'opération</span>
+                        <span id="detail-date-operation" class="block text-sm font-extrabold text-gray-900 mt-0.5">15/10/2026</span>
+                    </div>
+
+                    <div>
+                        <span class="block text-xs font-bold text-gray-400">N° de compte</span>
+                        <span class="block text-sm font-extrabold text-gray-900 mt-0.5 font-mono">000713N300400592</span>
+                    </div>
+
+                    <div>
+                        <span class="block text-xs font-bold text-gray-400">Montant</span>
+                        <span id="detail-montant-bas" class="block text-sm font-extrabold text-gray-900 mt-0.5">-203,05 DH</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <!-- MODAL DE NOTIFICATIONS -->
@@ -1525,7 +1584,7 @@
             
             <div class="space-y-3">
                 <!-- Option 1 : Compte Chèque -->
-                <div onclick="selectionnerCompte('compte-cheque', 'Compte chèque', '000713N300400592', '8,65 DH')" class="border border-gray-200 rounded-2xl p-4 flex items-center justify-between cursor-pointer hover:border-attijariOrange transition">
+                <div onclick="selectionnerCompte('compte-cheque', 'Compte chèque', '000713N300400592', '- 233,59 MAD')" class="border border-gray-200 rounded-2xl p-4 flex items-center justify-between cursor-pointer hover:border-attijariOrange transition">
                     <div class="flex items-center space-x-3.5">
                         <div class="w-11 h-11 rounded-xl bg-appRed text-white flex items-center justify-center font-bold text-sm">C</div>
                         <div>
@@ -1533,7 +1592,7 @@
                             <p class="text-xs text-gray-400 font-mono">000713N300400592</p>
                         </div>
                     </div>
-                    <span class="text-xs font-bold text-green-600 bg-green-50 px-2.5 py-1 rounded-full">8,65 DH</span>
+                    <span class="text-xs font-bold text-red-600 bg-red-50 px-2.5 py-1 rounded-full">- 233,59 MAD</span>
                 </div>
 
                 <!-- Option 2 : Compte Professionnel -->
@@ -1702,6 +1761,7 @@
 
         function switchTab(tabId) {
             document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.app-view').forEach(view => view.classList.remove('active'));
             document.getElementById('tab-' + tabId).classList.add('active');
             closeMobileMenuIfNeeded();
         }
@@ -1709,6 +1769,28 @@
         function ouvrirCompteProfessionnel() {
             showLoading(() => {
                 switchTab('transactions-pro');
+            });
+        }
+
+        // Fonction pour afficher la page de détail exacte de l'opération cliquée
+        function ouvrirDetailOperation(titre, montant, date, type) {
+            document.getElementById('detail-titre').innerText = titre;
+            document.getElementById('detail-montant').innerText = montant;
+            document.getElementById('detail-montant-bas').innerText = montant;
+            document.getElementById('detail-date-valeur').innerText = date;
+            document.getElementById('detail-date-operation').innerText = date;
+
+            const montantEl = document.getElementById('detail-montant');
+            if(type === 'positive') {
+                montantEl.className = "text-3xl font-black text-green-600 tracking-tight";
+            } else {
+                montantEl.className = "text-3xl font-black text-red-600 tracking-tight";
+            }
+
+            showLoading(() => {
+                document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+                const detailView = document.getElementById('view-detail-operation');
+                detailView.classList.add('active');
             });
         }
 
@@ -1740,15 +1822,6 @@
             showLoading(() => {
                 switchAppView(viewId);
             });
-        }
-
-        function toggleHistorique() {
-            const historiqueDiv = document.getElementById('historique-pro');
-            if (historiqueDiv && historiqueDiv.classList.contains('hidden')) {
-                historiqueDiv.classList.remove('hidden');
-            } else if (historiqueDiv) {
-                historiqueDiv.classList.add('hidden');
-            }
         }
 
         function toggleMaskSoldes() {
